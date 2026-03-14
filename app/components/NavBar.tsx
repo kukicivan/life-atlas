@@ -19,16 +19,16 @@ export default function NavBar() {
       </Link>
       <div className="nav-links">
         <Link 
-          href="/#tools" 
-          className={isActive('/#tools') ? 'active-link' : ''}
+          href="/" 
+          className={isActive('/') ? 'active-link' : ''}
         >
-          TOOLS
+          HOME
         </Link>
         <Link 
-          href="/blog" 
-          className={isActive('/blog') ? 'active-link' : ''}
+          href="/tools" 
+          className={isActive('/tools') ? 'active-link' : ''}
         >
-          BLOG
+          TOOLS
         </Link>
         <Link 
           href="/news" 

@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 export const metadata: Metadata = {
   title: "Life Atlas | Ivan Kukić",
   description: "Personal website, utilities, blog, and news by Ivan Kukić. Retro aesthetic, functional tools, and latest AI insights.",
-  keywords: "Ivan Kukuć, Life Atlas, Personal Agent, AI, Utilities, Ubuntu automation, Instagram downloader",
+  keywords: "Ivan Kukić, Life Atlas, Personal Agent, AI, Utilities, Ubuntu automation, Instagram downloader",
 };
 
 export default function RootLayout({
