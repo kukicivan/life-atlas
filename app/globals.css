@@ -141,8 +141,19 @@ nav {
   transform: translateY(-1px);
 }
 
+.nav-links a.active-link {
+  color: var(--neon-green);
+  text-shadow: var(--glow-green);
+  border-bottom: 2px solid var(--neon-green);
+  padding-bottom: 4px;
+}
+
 main {
-  padding-top: 80px;
+  padding-top: 100px;
+}
+
+section {
+  scroll-margin-top: 100px;
 }
 
 /* Scanline Effect */
