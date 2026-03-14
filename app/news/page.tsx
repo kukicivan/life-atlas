@@ -51,9 +51,6 @@ export default function NewsIndex() {
         ))}
       </div>
 
-      <div style={{ marginTop: '4rem', padding: '2rem', border: '1px dashed #444', textAlign: 'center', opacity: 0.6 }}>
-        <p>New signals detected daily. Check back for updates.</p>
-      </div>
     </main>
   );
 }
