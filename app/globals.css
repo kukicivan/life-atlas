@@ -151,7 +151,7 @@ nav {
 
 .nav-links a.active-link {
   color: var(--neon-green);
-  text-shadow: var(--glow-green);
+  text-shadow: var(--glow-green-subtle);
   border-bottom: 2px solid var(--neon-green);
   padding-bottom: 4px;
 }
