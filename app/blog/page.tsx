@@ -5,18 +5,6 @@ export default function BlogIndex() {
       title: "Building an AI Email Agent for Free",
       description: "A journey in patience, code, and why having a non-technical friend nearby is the secret to great software.",
       link: "/blog/email-agent"
-    },
-    {
-      date: "March 14, 2026",
-      title: "The Evolution of Autonomous Coding Agents",
-      description: "Reflecting on the transition from simple chat assistants to complex agentic entities that can manage entire repository lifecycles.",
-      link: "#"
-    },
-    {
-      date: "March 10, 2026",
-      title: "Retro Aesthetics in Modern Web",
-      description: "Exploring why the 'glow' of the 90s is making a comeback in high-performance developer tools.",
-      link: "#"
     }
   ];
 
