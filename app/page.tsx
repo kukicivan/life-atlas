@@ -17,9 +17,27 @@ export default function Home() {
           <div className="glow-card">
             <h3 className="glow-text-green">Ubuntu Automation Script</h3>
             <p style={{ margin: '1rem 0' }}>Streamline your Ubuntu setup with automated package installation and system optimization.</p>
-            <code>curl -sSL https://life-atlas-nine.vercel.app/setup/install.sh | bash</code>
+            <code>curl -sSL https://life-atlas-nine.vercel.app/bin/linux-setup/install.sh | bash</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/setup" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
+            </div>
+          </div>
+
+          <div className="glow-card">
+            <h3 className="glow-text-green">Instagram Photo Downloader</h3>
+            <p style={{ margin: '1rem 0' }}>A powerful Python-based tool to archive Instagram photos, including captions and sorting capabilities.</p>
+            <code>python instagram_downloader.py --user [username]</code>
+            <div style={{ marginTop: '1.5rem' }}>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-downloader" className="glow-text" style={{ fontSize: '0.9rem' }}>EXPLORE TOOL →</a>
+            </div>
+          </div>
+
+          <div className="glow-card">
+            <h3 className="glow-text-green">IG Screenshot Extractor</h3>
+            <p style={{ margin: '1rem 0' }}>Extract media and metadata from Instagram screenshots with high precision.</p>
+            <code>python ig_extract.py --input ./screenshots</code>
+            <div style={{ marginTop: '1.5rem' }}>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-extractor" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW REPOSITORY →</a>
             </div>
           </div>
 
@@ -30,21 +48,6 @@ export default function Home() {
             <div style={{ marginTop: '1.5rem' }}>
               <a href="https://github.com/kukicivan/md2docx" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW ON GITHUB →</a>
             </div>
-          </div>
-
-          <div className="glow-card">
-            <h3 className="glow-text-green">Instagram Downloader</h3>
-            <p style={{ margin: '1rem 0' }}>Simple CLI tool to archive your Instagram photos directly to your local machine.</p>
-            <code>python ig_download.py --user [username]</code>
-            <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/ig-archive" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW ON GITHUB →</a>
-            </div>
-          </div>
-
-          <div className="glow-card">
-            <h3 className="glow-text-green">Future Tool #1</h3>
-            <p style={{ margin: '1rem 0' }}>Under development: A specialized helper for managing personal AI agents locally.</p>
-            <p style={{ fontStyle: 'italic', opacity: 0.5 }}>Coming soon...</p>
           </div>
         </div>
       </section>

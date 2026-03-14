@@ -1,0 +1,111 @@
+# ============================================================================
+# INSTAGRAM DOWNLOADER - .gitignore
+# ============================================================================
+
+# 🔒 SIGURNOST - Session fajlovi i kredencijali
+# ============================================================================
+*_session
+*.session
+.env
+.env.*
+credentials.json
+config.json
+
+# 📸 Preuzete slike i media
+# ============================================================================
+instagram_downloads/
+downloads/
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.mov
+
+# Cache i metadata
+# ============================================================================
+.download_cache.json
+*.csv
+captions_and_comments.csv
+
+# 🐍 Python
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# 💻 IDE i Editor fajlovi
+# ============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# 🖥️ OS-specifični fajlovi
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# 📝 Logs i temporary fajlovi
+# ============================================================================
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 🔧 Ostalo
+# ============================================================================
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# pyenv
+.python-version
+
+# Claude Code memory (ako želiš)
+# .claude/

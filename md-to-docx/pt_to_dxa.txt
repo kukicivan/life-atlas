@@ -1,0 +1,21 @@
+pt  -> DXA
+--------------
+ 6 pt  =   120 DXA
+ 7 pt  =   140 DXA
+ 8 pt  =   160 DXA
+ 9 pt  =   180 DXA
+10 pt  =   200 DXA
+11 pt  =   220 DXA
+12 pt  =   240 DXA
+13 pt  =   260 DXA
+14 pt  =   280 DXA
+15 pt  =   300 DXA
+16 pt  =   320 DXA
+17 pt  =   340 DXA
+18 pt  =   360 DXA
+19 pt  =   380 DXA
+20 pt  =   400 DXA
+21 pt  =   420 DXA
+22 pt  =   440 DXA
+23 pt  =   460 DXA
+24 pt  =   480 DXA

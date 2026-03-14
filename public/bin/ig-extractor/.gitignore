@@ -1,0 +1,52 @@
+# ============================================================================
+# Instagram Screenshot Extractor - .gitignore
+# ============================================================================
+
+# 📸 Input/Output folderi - ignoriši sve slike
+# ============================================================================
+extracted/
+screenshots/
+output/
+
+# Media fajlovi (ako su van foldera)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+
+# 🐍 Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# 💻 IDE fajlovi
+# ============================================================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# 🖥️ OS fajlovi
+# ============================================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 📝 Logs i temp
+# ============================================================================
+*.log
+*.tmp
+*.temp

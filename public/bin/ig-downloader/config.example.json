@@ -1,0 +1,8 @@
+{
+    "cookies_file":      "./www.instagram.com_cookies.txt",
+    "target_profile":    "profile_name_here",
+    "max_photos":        5,
+    "skip_videos":       true,
+    "download_folder":   "./instagram_downloads",
+    "download_comments": false
+}
