@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import SectionIndicator from "./components/SectionIndicator";
+
 
 export const metadata: Metadata = {
   title: "Life Atlas | Ivan Kukuć",
@@ -17,7 +17,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <SectionIndicator />
         <nav>
           <a href="/" style={{ textDecoration: 'none' }}><div className="glow-text" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div></a>
           <div className="nav-links">
