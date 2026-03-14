@@ -18,36 +18,40 @@ export default function Home() {
             <h3 className="glow-text-green">Ubuntu Automation Script</h3>
             <p style={{ margin: '1rem 0' }}>Streamline your Ubuntu setup with automated package installation and system optimization.</p>
             <code>curl -sSL https://life-atlas-nine.vercel.app/bin/linux-setup/install.sh | bash</code>
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1.5rem', position: 'relative', zIndex: 20 }}>
               <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
             </div>
+            <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup" target="_blank" rel="noopener noreferrer" className="card-link"></a>
           </div>
 
           <div className="glow-card">
             <h3 className="glow-text-green">Instagram Photo Downloader</h3>
             <p style={{ margin: '1rem 0' }}>A powerful Python-based tool to archive Instagram photos, including captions and sorting capabilities.</p>
             <code>python instagram_downloader.py --user [username]</code>
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1.5rem', position: 'relative', zIndex: 20 }}>
               <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-downloader" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>EXPLORE TOOL →</a>
             </div>
+            <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-downloader" target="_blank" rel="noopener noreferrer" className="card-link"></a>
           </div>
 
           <div className="glow-card">
             <h3 className="glow-text-green">IG Screenshot Extractor</h3>
             <p style={{ margin: '1rem 0' }}>Extract media and metadata from Instagram screenshots with high precision.</p>
             <code>python ig_extract.py --input ./screenshots</code>
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1.5rem', position: 'relative', zIndex: 20 }}>
               <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-extractor" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW REPOSITORY →</a>
             </div>
+            <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-extractor" target="_blank" rel="noopener noreferrer" className="card-link"></a>
           </div>
 
           <div className="glow-card">
             <h3 className="glow-text-green">MD2Docx Converter</h3>
             <p style={{ margin: '1rem 0' }}>Convert Markdown to professional Word documents with custom styling and A5 support.</p>
             <code>node md2docx.js input.md output.docx a5</code>
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1.5rem', position: 'relative', zIndex: 20 }}>
               <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/md-to-docx" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
             </div>
+            <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/md-to-docx" target="_blank" rel="noopener noreferrer" className="card-link"></a>
           </div>
         </div>
       </section>
@@ -60,7 +64,8 @@ export default function Home() {
             <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>Latest Post</span>
             <h3 style={{ margin: '0.5rem 0' }}>Building an AI Email Agent for Free</h3>
             <p>A journey in patience, code, and why having a non-technical friend nearby is the secret to great software.</p>
-            <a href="/blog" className="glow-text" style={{ display: 'block', marginTop: '1rem' }}>ENTER BLOG ENVIRONMENT →</a>
+            <a href="/blog" className="glow-text" style={{ display: 'block', marginTop: '1rem', position: 'relative', zIndex: 20 }}>ENTER BLOG ENVIRONMENT →</a>
+            <a href="/blog" className="card-link"></a>
           </div>
         </div>
       </section>
@@ -73,7 +78,8 @@ export default function Home() {
           <p style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
             Experimental API access with significant compute credits. No credit card required for qualified developers.
           </p>
-          <a href="/news" className="glow-text" style={{ display: 'block' }}>OPEN NEWS FEED →</a>
+          <a href="/news" className="glow-text" style={{ display: 'block', position: 'relative', zIndex: 20 }}>OPEN NEWS FEED →</a>
+          <a href="/news" className="card-link"></a>
         </div>
       </section>
     </main>

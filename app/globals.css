@@ -53,12 +53,49 @@ a {
   border-radius: 4px;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .glow-card:hover {
   border-color: var(--neon-cyan);
   box-shadow: 0 0 10px var(--neon-cyan);
   background: rgba(0, 243, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* Active Section Indicator */
+.active-indicator {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 300;
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--neon-cyan);
+  background: rgba(5, 5, 5, 0.8);
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+  box-shadow: var(--glow-cyan);
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.active-indicator::before {
+  content: "STATUS: ";
+  opacity: 0.6;
 }
 
 /* Sections */

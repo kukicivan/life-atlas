@@ -21,9 +21,10 @@ export default function BlogIndex() {
             <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{post.date}</span>
             <h2 className="glow-text-green" style={{ margin: '0.5rem 0' }}>{post.title}</h2>
             <p style={{ opacity: 0.8 }}>{post.description}</p>
-            <a href={post.link} className="glow-text" style={{ alignSelf: 'flex-start', marginTop: '1rem', fontSize: '0.9rem' }}>
+            <a href={post.link} className="glow-text" style={{ alignSelf: 'flex-start', marginTop: '1rem', fontSize: '0.9rem', position: 'relative', zIndex: 20 }}>
               READ FULL STORY →
             </a>
+            <a href={post.link} className="card-link"></a>
           </div>
         ))}
       </div>

@@ -40,10 +40,13 @@ export default function NewsIndex() {
               border: '1px solid var(--neon-green)', 
               padding: '0.8rem 1.5rem',
               textDecoration: 'none',
-              display: 'inline-block'
+              display: 'inline-block',
+              position: 'relative',
+              zIndex: 20
             }}>
               {item.cta} ⚡
             </a>
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="card-link"></a>
           </div>
         ))}
       </div>
