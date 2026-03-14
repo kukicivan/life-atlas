@@ -17,9 +17,9 @@ export default function Home() {
           <div className="glow-card">
             <h3 className="glow-text-green">Ubuntu Automation Script</h3>
             <p style={{ margin: '1rem 0' }}>Streamline your Ubuntu setup with automated package installation and system optimization.</p>
-            <code>curl -sSL https://raw.githubusercontent.com/kukicivan/ubuntu-auto/main/setup.sh | bash</code>
+            <code>curl -sSL https://life-atlas-nine.vercel.app/setup/install.sh | bash</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/ubuntu-auto" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW ON GITHUB →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/setup" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
             </div>
           </div>
 
