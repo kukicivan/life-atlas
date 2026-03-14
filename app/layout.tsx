@@ -18,9 +18,9 @@ export default function RootLayout({
         <nav>
           <div className="glow-text" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
           <div className="nav-links">
-            <a href="#tools">TOOLS</a>
-            <a href="#blog">BLOG</a>
-            <a href="#news">NEWS</a>
+            <a href="/#tools">TOOLS</a>
+            <a href="/blog">BLOG</a>
+            <a href="/news">NEWS</a>
           </div>
         </nav>
         {children}

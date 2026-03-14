@@ -1,0 +1,44 @@
+export default function BlogIndex() {
+  const posts = [
+    {
+      date: "March 14, 2026",
+      title: "Building an AI Email Agent for Free",
+      description: "A journey in patience, code, and why having a non-technical friend nearby is the secret to great software.",
+      link: "/blog/email-agent"
+    },
+    {
+      date: "March 14, 2026",
+      title: "The Evolution of Autonomous Coding Agents",
+      description: "Reflecting on the transition from simple chat assistants to complex agentic entities that can manage entire repository lifecycles.",
+      link: "#"
+    },
+    {
+      date: "March 10, 2026",
+      title: "Retro Aesthetics in Modern Web",
+      description: "Exploring why the 'glow' of the 90s is making a comeback in high-performance developer tools.",
+      link: "#"
+    }
+  ];
+
+  return (
+    <main style={{ padding: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
+      <header style={{ marginBottom: '4rem', textAlign: 'center' }}>
+        <h1 className="glow-text" style={{ fontSize: '3.5rem' }}>BLOGU</h1>
+        <p style={{ opacity: 0.6 }}>Agent Experiences, AI Journeys & Technical Lore</p>
+      </header>
+
+      <div style={{ display: 'grid', gap: '2rem' }}>
+        {posts.map((post, i) => (
+          <div key={i} className="glow-card" style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>{post.date}</span>
+            <h2 className="glow-text-green" style={{ margin: '0.5rem 0' }}>{post.title}</h2>
+            <p style={{ opacity: 0.8 }}>{post.description}</p>
+            <a href={post.link} className="glow-text" style={{ alignSelf: 'flex-start', marginTop: '1rem', fontSize: '0.9rem' }}>
+              READ FULL STORY →
+            </a>
+          </div>
+        ))}
+      </div>
+    </main>
+  );
+}
