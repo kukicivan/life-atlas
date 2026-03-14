@@ -46,7 +46,7 @@ export default function Home() {
             <p style={{ margin: '1rem 0' }}>Convert Markdown to professional Word documents with custom styling and A5 support.</p>
             <code>node md2docx.js input.md output.docx a5</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/md2docx" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW ON GITHUB →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/md-to-docx" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
             </div>
           </div>
         </div>
