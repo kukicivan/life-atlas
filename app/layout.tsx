@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <nav>
-          <div className="glow-text" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
+          <a href="/" style={{ textDecoration: 'none' }}><div className="glow-text" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div></a>
           <div className="nav-links">
             <a href="/#tools">TOOLS</a>
             <a href="/blog">BLOG</a>
