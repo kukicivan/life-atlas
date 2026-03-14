@@ -35,7 +35,7 @@ export default function EmailAgentPost() {
         </p>
         <ul style={{ paddingLeft: '1.5rem', margin: '1rem 0' }}>
           <li><strong>OpenClaw</strong> — Free and open-source.</li>
-          <li><strong>OpenRouter</strong> — Free tier available at openrouter.ai. Real AI models, no upfront cost.</li>
+          <li><strong>OpenRouter</strong> — Free tier available at <a href="https://openrouter.ai" target="_blank" rel="noopener noreferrer" className="glow-text">openrouter.ai</a>. Real AI models, no upfront cost.</li>
           <li><strong>AWS or Azure</strong> — Both offer free tier virtual machines.</li>
           <li><strong>Docker</strong> — The cleanest way to containerise your setup.</li>
         </ul>
@@ -59,9 +59,6 @@ export default function EmailAgentPost() {
         </p>
       </div>
       
-      <div style={{ textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
-        Made with ❤️ for the AI community
-      </div>
     </main>
   );
 }

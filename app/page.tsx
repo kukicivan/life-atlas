@@ -19,7 +19,7 @@ export default function Home() {
             <p style={{ margin: '1rem 0' }}>Streamline your Ubuntu setup with automated package installation and system optimization.</p>
             <code>curl -sSL https://life-atlas-nine.vercel.app/bin/linux-setup/install.sh | bash</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
             </div>
           </div>
 
@@ -28,7 +28,7 @@ export default function Home() {
             <p style={{ margin: '1rem 0' }}>A powerful Python-based tool to archive Instagram photos, including captions and sorting capabilities.</p>
             <code>python instagram_downloader.py --user [username]</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-downloader" className="glow-text" style={{ fontSize: '0.9rem' }}>EXPLORE TOOL →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-downloader" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>EXPLORE TOOL →</a>
             </div>
           </div>
 
@@ -37,7 +37,7 @@ export default function Home() {
             <p style={{ margin: '1rem 0' }}>Extract media and metadata from Instagram screenshots with high precision.</p>
             <code>python ig_extract.py --input ./screenshots</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-extractor" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW REPOSITORY →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/ig-extractor" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW REPOSITORY →</a>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
             <p style={{ margin: '1rem 0' }}>Convert Markdown to professional Word documents with custom styling and A5 support.</p>
             <code>node md2docx.js input.md output.docx a5</code>
             <div style={{ marginTop: '1.5rem' }}>
-              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/md-to-docx" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
+              <a href="https://github.com/kukicivan/life-atlas/tree/main/public/bin/md-to-docx" target="_blank" rel="noopener noreferrer" className="glow-text" style={{ fontSize: '0.9rem' }}>VIEW SCRIPT SOURCE →</a>
             </div>
           </div>
         </div>

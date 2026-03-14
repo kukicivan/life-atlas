@@ -4,7 +4,7 @@ export default function NewsIndex() {
       title: "Mistral AI: Experimental €150 Credit Program",
       description: "Mistral AI is now offering experimental API access with €150 monthly credit to developers working on their 2026 models. No credit card needed.",
       cta: "REGISTER AT MISTRAL.AI",
-      link: "https://mistral.ai/studio/subscription",
+      link: "https://console.mistral.ai",
       category: "OPPORTUNITY",
       urgent: true
     },
@@ -42,7 +42,7 @@ export default function NewsIndex() {
             </div>
             <h2 className="glow-text" style={{ marginBottom: '1rem' }}>{item.title}</h2>
             <p style={{ opacity: 0.8, marginBottom: '2rem', lineHeight: '1.6' }}>{item.description}</p>
-            <a href={item.link} className="glow-text-green" style={{ 
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="glow-text-green" style={{ 
               fontSize: '0.9rem', 
               border: '1px solid var(--neon-green)', 
               padding: '0.8rem 1.5rem',
