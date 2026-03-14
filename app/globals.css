@@ -217,8 +217,8 @@ nav {
 }
 
 .nav-links a:hover {
-  text-shadow: var(--glow-cyan-subtle);
-  transform: translateY(-1px);
+  color: var(--neon-cyan);
+  opacity: 1;
 }
 
 .nav-links a.active-link {
