@@ -1,9 +1,9 @@
 export default function EmailAgentPost() {
   return (
     <main style={{ padding: '8rem 2rem 4rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-      <a href="/" className="glow-text" style={{ display: 'inline-block', marginBottom: '2rem', fontSize: '0.9rem' }}>← BACK TO HOME</a>
+      <a href="/" className="glow-text" style={{ display: 'inline-block', marginBottom: '2rem', fontSize: '0.9rem', textShadow: 'none' }}>← BACK TO HOME</a>
       
-      <h1 className="glow-text" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>
+      <h1 className="glow-text" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', textShadow: 'none' }}>
         Building an AI Email Agent for Free: A Journey in Patience, Code, and Good Company
       </h1>
       <p style={{ opacity: 0.6, marginBottom: '2rem' }}>March 14, 2026 • By Ivan Kukić</p>

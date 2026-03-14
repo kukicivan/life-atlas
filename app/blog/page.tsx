@@ -11,7 +11,7 @@ export default function BlogIndex() {
   return (
     <main style={{ padding: '8rem 2rem 4rem', maxWidth: '1000px', margin: '0 auto' }}>
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>
-        <h1 className="glow-text" style={{ fontSize: '3.5rem' }}>BLOG</h1>
+        <h1 className="glow-text" style={{ fontSize: '3.5rem', textShadow: 'none' }}>BLOG</h1>
         <p style={{ opacity: 0.6 }}>tech core</p>
       </header>
 
