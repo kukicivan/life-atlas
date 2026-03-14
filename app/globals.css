@@ -1,0 +1,135 @@
+:root {
+  --bg-color: #050505;
+  --text-color: #e0e0e0;
+  --neon-cyan: #00f3ff;
+  --neon-green: #39ff14;
+  --neon-magenta: #ff00ff;
+  --glow-cyan: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
+  --glow-green: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+  --border-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Retro Glow Elements */
+.glow-text {
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.glow-text-green {
+  color: var(--neon-green);
+  text-shadow: var(--glow-green);
+}
+
+.glow-border {
+  border: 1px solid var(--neon-cyan);
+  box-shadow: 0 0 5px var(--neon-cyan);
+}
+
+.glow-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glow-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan);
+  background: rgba(0, 243, 255, 0.03);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Layout utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a:hover {
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+/* Scanline Effect */
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 200;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
