@@ -15,7 +15,7 @@ export default function NavBar() {
   return (
     <nav>
       <Link href="/" style={{ textDecoration: 'none' }}>
-        <div className="glow-text" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
+        <div className="logo-glow" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
       </Link>
       <div className="nav-links">
         <Link 

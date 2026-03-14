@@ -6,6 +6,8 @@
   --neon-magenta: #ff00ff;
   --glow-cyan: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
   --glow-green: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+  --glow-cyan-subtle: 0 0 2px var(--neon-cyan), 0 0 4px var(--neon-cyan);
+  --glow-green-subtle: 0 0 2px var(--neon-green), 0 0 4px var(--neon-green);
   --border-color: #333;
 }
 
@@ -33,18 +35,24 @@ a {
 /* Retro Glow Elements */
 .glow-text {
   color: var(--neon-cyan);
+  text-shadow: var(--glow-cyan-subtle);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.logo-glow {
+  color: var(--neon-cyan);
   text-shadow: var(--glow-cyan);
   transition: text-shadow 0.3s ease-in-out;
 }
 
 .glow-text-green {
   color: var(--neon-green);
-  text-shadow: var(--glow-green);
+  text-shadow: var(--glow-green-subtle);
 }
 
 .glow-border {
   border: 1px solid var(--neon-cyan);
-  box-shadow: 0 0 5px var(--neon-cyan);
+  box-shadow: 0 0 3px var(--neon-cyan);
 }
 
 .glow-card {
@@ -60,7 +68,7 @@ a {
 
 .glow-card:hover {
   border-color: var(--neon-cyan);
-  box-shadow: 0 0 10px var(--neon-cyan);
+  box-shadow: 0 0 5px var(--neon-cyan);
   background: rgba(0, 243, 255, 0.03);
   transform: translateY(-2px);
 }
