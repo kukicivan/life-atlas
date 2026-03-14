@@ -1,6 +1,6 @@
 export default function EmailAgentPost() {
   return (
-    <main style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+    <main style={{ padding: '8rem 2rem 4rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
       <a href="/" className="glow-text" style={{ display: 'inline-block', marginBottom: '2rem', fontSize: '0.9rem' }}>← BACK TO HOME</a>
       
       <h1 className="glow-text" style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>
