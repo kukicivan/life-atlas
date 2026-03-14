@@ -58,15 +58,15 @@ export default function Home() {
         <div className="grid">
           <div className="glow-card">
             <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>March 14, 2026</span>
-            <h3 style={{ margin: '0.5rem 0' }}>The Evolution of Autonomous Coding Agents</h3>
-            <p>Reflecting on the transition from simple chat assistants to complex agentic entities that can manage entire repository lifecycles.</p>
-            <a href="#" className="glow-text" style={{ display: 'block', marginTop: '1rem' }}>READ MORE →</a>
+            <h3 style={{ margin: '0.5rem 0' }}>Building an AI Email Agent for Free</h3>
+            <p>A journey in patience, code, and why having a non-technical friend nearby is the secret to great software.</p>
+            <a href="/blog/email-agent" className="glow-text" style={{ display: 'block', marginTop: '1rem' }}>READ FULL STORY →</a>
           </div>
 
           <div className="glow-card">
-            <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>March 12, 2026</span>
-            <h3 style={{ margin: '0.5rem 0' }}>Building My First Local LLM Cluster</h3>
-            <p>Insights into high-performance local inference and why data privacy is the future of personal AI.</p>
+            <span style={{ fontSize: '0.8rem', opacity: 0.5 }}>March 14, 2026</span>
+            <h3 style={{ margin: '0.5rem 0' }}>The Evolution of Autonomous Coding Agents</h3>
+            <p>Reflecting on the transition from simple chat assistants to complex agentic entities that can manage entire repository lifecycles.</p>
             <a href="#" className="glow-text" style={{ display: 'block', marginTop: '1rem' }}>READ MORE →</a>
           </div>
         </div>
@@ -75,12 +75,20 @@ export default function Home() {
       {/* News Section */}
       <section id="news" style={{ marginBottom: '4rem' }}>
         <h2 className="section-title glow-text">Hidden Opportunities</h2>
-        <div className="glow-card" style={{ borderLeft: '4px solid var(--neon-cyan)' }}>
-          <h3 className="glow-text">The Silent Revolution in Decentralized Compute</h3>
-          <p style={{ marginTop: '1rem' }}>
-            There's a massive shift happening in how we handle large-scale inference. Projects like [Redacted] are offering early-access nodes for virtually no cost, provided you have the hardware. Nobody is talking about this yet, but the ROI for early participants is looking exponential.
-          </p>
-          <p style={{ marginTop: '1rem', fontStyle: 'italic' }}>Stay tuned for the detailed breakdown next week.</p>
+        <div className="grid">
+          <div className="glow-card" style={{ borderLeft: '4px solid var(--neon-cyan)' }}>
+            <h3 className="glow-text">Mistral AI: Free €150 Credits for 2026 Models</h3>
+            <p style={{ marginTop: '1rem' }}>
+              Mistral AI is now offering experimental API access with €150 monthly credit to developers working on their 2026 models. No credit card needed. Get started with full API access, grab your key, and apply for the developer program at <a href="https://mistral.ai/studio/subscription" className="glow-text">mistral.ai/studio/subscription</a>.
+            </p>
+          </div>
+
+          <div className="glow-card" style={{ borderLeft: '4px solid var(--neon-cyan)' }}>
+            <h3 className="glow-text">The Silent Revolution in Decentralized Compute</h3>
+            <p style={{ marginTop: '1rem' }}>
+              There's a massive shift happening in how we handle large-scale inference. Projects like [Redacted] are offering early-access nodes for virtually no cost.
+            </p>
+          </div>
         </div>
       </section>
     </main>
