@@ -8,14 +8,7 @@ export default function NewsIndex() {
       category: "OPPORTUNITY",
       urgent: true
     },
-    {
-      title: "The Silent Revolution in Decentralized Compute",
-      description: "Large-scale inference is moving to decentralized nodes. io.net is currently aggregating over 300,000 GPUs to rival centralized cloud providers, offering hardware owners a path to monetize idle power.",
-      cta: "EXPLORE IO.NET",
-      link: "https://io.net",
-      category: "INFRASTRUCTURE",
-      urgent: false
-    }
+
   ];
 
   return (
