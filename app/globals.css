@@ -305,6 +305,84 @@ section {
   scroll-margin-top: 120px;
 }
 
+/* Markdown Body — rendered post content */
+.markdown-body h2 {
+  font-size: 1.6rem;
+  color: var(--neon-cyan);
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
+  color: var(--neon-cyan);
+  margin: 2rem 0 0.75rem;
+}
+
+.markdown-body p {
+  margin: 1rem 0;
+  opacity: 0.85;
+}
+
+.markdown-body a {
+  color: var(--neon-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.markdown-body a:hover {
+  opacity: 0.7;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--neon-cyan);
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: rgba(0, 243, 255, 0.03);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.markdown-body li {
+  margin: 0.4rem 0;
+  opacity: 0.85;
+}
+
+.markdown-body pre {
+  background: #0d0d0d;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.markdown-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--neon-green);
+  font-size: 0.85rem;
+}
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 2.5rem 0;
+}
+
+.markdown-body strong {
+  color: #fff;
+  font-weight: 600;
+}
+
 /* Scanline Effect */
 body::after {
   content: " ";

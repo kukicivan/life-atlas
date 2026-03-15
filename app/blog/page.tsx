@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { blogPosts } from '../data/blog';
+import { getAllPosts } from '../lib/content';
 
 export const metadata = {
   title: 'Blog | Life Atlas',
@@ -12,6 +12,8 @@ export const metadata = {
 };
 
 export default function BlogIndex() {
+  const posts = getAllPosts('blog');
+
   return (
     <main style={{ maxWidth: '1000px', margin: '0 auto' }}>
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>
@@ -20,10 +22,10 @@ export default function BlogIndex() {
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-        {blogPosts.map((post, i) => (
+        {posts.map((post) => (
           <Link 
-            key={i} 
-            href={post.link}
+            key={post.slug} 
+            href={`/blog/${post.slug}`}
             className="glow-card tool-card"
             style={{ 
               padding: '2.5rem', 
@@ -34,9 +36,9 @@ export default function BlogIndex() {
               cursor: 'pointer'
             }}
           >
-            <span style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-              {post.date}
-            </span>
+            <time dateTime={post.date} style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).toUpperCase()}
+            </time>
             <h2 style={{ 
               margin: '1rem 0 0.75rem', 
               fontSize: '1.6rem', 

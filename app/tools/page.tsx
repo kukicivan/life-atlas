@@ -1,5 +1,5 @@
 import UtilityCard from '../components/UtilityCard';
-import { tools } from '../data/tools';
+import { getTools } from '../lib/content';
 
 export const metadata = {
   title: 'Tools | Life Atlas',
@@ -12,6 +12,8 @@ export const metadata = {
 };
 
 export default function ToolsPage() {
+  const tools = getTools();
+
   return (
     <main style={{ maxWidth: '1000px', margin: '0 auto' }}>
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { newsItems } from '../data/news';
+import { getAllPosts } from '../lib/content';
 
 export const metadata = {
   title: 'News | Life Atlas',
@@ -12,6 +12,8 @@ export const metadata = {
 };
 
 export default function NewsIndex() {
+  const items = getAllPosts('news');
+
   return (
     <main style={{ maxWidth: '1000px', margin: '0 auto' }}>
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>
@@ -20,10 +22,10 @@ export default function NewsIndex() {
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-        {newsItems.map((item, i) => (
+        {items.map((item) => (
           <Link 
-            key={i} 
-            href={item.link}
+            key={item.slug} 
+            href={`/news/${item.slug}`}
             className="glow-card tool-card"
             style={{ 
               padding: '2.5rem', 
@@ -34,9 +36,9 @@ export default function NewsIndex() {
               cursor: 'pointer'
             }}
           >
-            <span style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-              {item.date}
-            </span>
+            <time dateTime={item.date} style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+              {new Date(item.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).toUpperCase()}
+            </time>
             <h2 style={{ 
               margin: '1rem 0 0.75rem', 
               fontSize: '1.6rem', 
@@ -54,7 +56,7 @@ export default function NewsIndex() {
               {item.description}
             </p>
             <div style={{ marginTop: '2rem', fontSize: '0.85rem', fontWeight: 'bold', color: 'var(--neon-green)', opacity: 0.8 }}>
-              {item.cta} ⚡
+              {item.cta ?? 'READ MORE'} ⚡
             </div>
           </Link>
         ))}
