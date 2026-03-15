@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.lifeatlas.site';
+  const baseUrl = 'https://lifeatlas.site';
 
   return [
     {
