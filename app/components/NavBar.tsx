@@ -18,9 +18,9 @@ export default function NavBar() {
         <div className="logo-glow" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
       </Link>
       <div className="nav-links">
-        <Link 
-          href="/" 
-          className={isActive('/') ? 'active-link' : ''}
+        <Link
+          href="/"
+          className={`nav-link ${pathname === '/' ? 'active' : ''}`}
         >
           HOME
         </Link>

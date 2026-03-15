@@ -1,64 +1,95 @@
 export default function EmailAgentPost() {
   return (
-    <main style={{ padding: '8rem 2rem 4rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
-      <a href="/" className="glow-text" style={{ display: 'inline-block', marginBottom: '2rem', fontSize: '0.9rem', textShadow: 'none' }}>← BACK TO HOME</a>
+    <main style={{ padding: '8rem 2rem 4rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
+      <a href="/blog" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
+        ← BACK TO BLOG
+      </a>
       
-      <h1 className="glow-text" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', textShadow: 'none' }}>
-        Building an AI Email Agent for Free: A Journey in Patience, Code, and Good Company
-      </h1>
-      <p style={{ opacity: 0.6, marginBottom: '2rem' }}>March 14, 2026 • By Ivan Kukić</p>
+      <header style={{ marginBottom: '4rem' }}>
+        <h1 style={{ fontSize: '2.8rem', marginBottom: '1.5rem', lineHeight: '1.2', fontWeight: 'bold', letterSpacing: '-0.02em' }}>
+          Building an AI Email Agent: Technical Progress Through Quality Time
+        </h1>
+        <div style={{ display: 'flex', gap: '1.5rem', opacity: 0.5, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <span>MARCH 14, 2026</span>
+          <span>•</span>
+          <span>BY IVAN KUKIĆ</span>
+        </div>
+      </header>
       
-      <div className="glow-card" style={{ padding: '2rem', marginBottom: '3rem' }}>
-        <p style={{ fontStyle: 'italic', marginBottom: '2rem' }}>
-          How a frustrated inbox, a few free tools, and an older friend who knew nothing about tech led to something worth sharing.
+      <article className="utility-card" style={{ padding: '3rem', border: 'none', background: 'rgba(255, 255, 255, 0.02)' }}>
+        <p style={{ fontSize: '1.3rem', color: 'var(--neon-cyan)', marginBottom: '3.5rem', fontWeight: '500', lineHeight: '1.4' }}>
+          "This wasn't built in isolation. It was built during hours of conversation with a friend who has 76 years of life experience. The environment was the catalyst."
         </p>
 
-        <h2 className="glow-text-green" style={{ marginTop: '2rem' }}>Chapter 1: The Problem Nobody Talks About</h2>
-        <p>
-          Let me be upfront with you. I am the tech person in this story. I know how to set up a server, write a config file, and debug a broken installation at midnight. But even for me, starting a new project from scratch — something genuinely useful, not just a toy — takes time, patience, and honestly, the right atmosphere.
-        </p>
-        <p>
-          The problem I wanted to solve was simple: too many emails, not enough time. Every morning I would open my inbox and feel immediately overwhelmed. Newsletters, work threads, notifications, spam disguised as opportunity. Too much noise. I wanted one thing — a short, clear summary of what actually matters, delivered to me through WhatsApp or Telegram, wherever I already spend my time.
-        </p>
+        <section style={{ marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '1.7rem', color: '#fff', marginBottom: '1.5rem', fontWeight: 'bold' }}>
+            Beyond the Myth of the "Silent Room"
+          </h2>
+            Chapter 1: Beyond the Myth of the "Silent Room"
+          </h2>
+          <p style={{ marginBottom: '1.5rem', opacity: 0.9 }}>
+            There is a common belief that technical work requires total isolation. For three days, I proved the opposite. I didn't lock myself away to build this AI email agent. Instead, I spent that time with a dear friend—a man of 76 years who has significantly more life experience than I do. 
+          </p>
+          <p style={{ opacity: 0.9 }}>
+            The productivity didn't come from a "grind." It came from the calm, steady presence of someone who understands what actually matters. Sitting there, talking about real life, provided a mental clarity that made the most complex Docker configurations feel manageable.
+          </p>
+        </section>
 
-        <h2 className="glow-text-green" style={{ marginTop: '2rem' }}>Chapter 2: The Unlikely Co-Worker</h2>
-        <p>
-          My friend is an older guy. Not technical at all. He does not know what Docker is. He has never opened a terminal. He is not the kind of person you would expect to find sitting next to someone building an AI agent.
-        </p>
-        <p>
-          But he was there. We hung out. We talked about life. We had coffee. And in between all of that, I was coding, configuring, and debugging — slowly building something real. His presence made a genuine difference. Not because he contributed technically — he absolutely did not — but because I was never grinding in isolation.
-        </p>
+        <section style={{ marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '1.7rem', color: '#fff', marginBottom: '1.5rem', fontWeight: 'bold' }}>
+            Chapter 2: Experience as a Productivity Multiplier
+          </h2>
+          <p style={{ marginBottom: '1.5rem', opacity: 0.9 }}>
+            My friend doesn't open a terminal, but his company provided the perfect environment for deep work. When you are with someone who has seen it all, the "noise" of technical frustration disappears. You aren't rushing to finish; you are just working while enjoying the quality of the time spent.
+          </p>
+          <p style={{ opacity: 0.9 }}>
+            I’ve realized that I reached the finish line because I wasn't doing it in a vacuum. Fixing an SMTP relay at 2 AM becomes a simple task when you are in a headspace shaped by respect and good conversation. The project became a byproduct of a great weekend.
+          </p>
+        </section>
 
-        <h2 className="glow-text-green" style={{ marginTop: '2rem' }}>Chapter 3: Discovering OpenClaw — and the Free Stack</h2>
-        <p>
-          The tool I built around is called <strong>OpenClaw</strong>. It is open-source, free, and designed to be your personal AI assistant running on your own hardware.
-        </p>
-        <ul style={{ paddingLeft: '1.5rem', margin: '1rem 0' }}>
-          <li><strong>OpenClaw</strong> — Free and open-source.</li>
-          <li><strong>OpenRouter</strong> — Free tier available at <a href="https://openrouter.ai" target="_blank" rel="noopener noreferrer" className="glow-text">openrouter.ai</a>. Real AI models, no upfront cost.</li>
-          <li><strong>AWS or Azure</strong> — Both offer free tier virtual machines.</li>
-          <li><strong>Docker</strong> — The cleanest way to containerise your setup.</li>
-        </ul>
+        <section style={{ marginBottom: '4rem', background: 'rgba(0, 255, 255, 0.03)', padding: '2.5rem', borderRadius: '8px', border: '1px solid rgba(0, 255, 255, 0.1)' }}>
+          <h2 style={{ fontSize: '1.5rem', color: 'var(--neon-cyan)', marginBottom: '1.5rem', fontWeight: 'bold' }}>
+            Chapter 3: The Technical Outcome
+          </h2>
+          <p style={{ marginBottom: '1.5rem', opacity: 0.9 }}>
+            In the periods between our conversations, I managed to finalize a system that now runs autonomously:
+          </p>
+          <ul style={{ paddingLeft: '0', margin: '1.5rem 0', listStyle: 'none' }}>
+            <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+              <span style={{ color: 'var(--neon-cyan)', fontWeight: 'bold' }}>[+]</span>
+              <span><strong>OpenClaw</strong> — Free and open-source engine running in Docker.</span>
+            </li>
+            <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+              <span style={{ color: 'var(--neon-cyan)', fontWeight: 'bold' }}>[+]</span>
+              <span><strong>OpenRouter & Mistral AI</strong> — Tapping into high-tier models via free tiers and experimental credits.</span>
+            </li>
+            <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+              <span style={{ color: 'var(--neon-cyan)', fontWeight: 'bold' }}>[+]</span>
+              <span><strong>Cloud Infrastructure</strong> — Azure or AWS free tier virtual machines for 24/7 uptime.</span>
+            </li>
+            <li style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
+              <span style={{ color: 'var(--neon-cyan)', fontWeight: 'bold' }}>[+]</span>
+              <span><strong>Docker</strong> — The cleanest way to containerize the entire setup.</span>
+            </li>
+          </ul>
+        </section>
 
-        <h2 className="glow-text-green" style={{ marginTop: '2rem' }}>Chapter 4: Three Days of Real Work</h2>
-        <p>
-          Day one was setup. Day two, the agent was reading my Gmail. By day three, it was summarising emails and I was asking it questions through Telegram. That moment — typing a message on my phone and getting back a clean summary of my inbox — felt genuinely satisfying.
-        </p>
-        <blockquote style={{ borderLeft: '3px solid var(--neon-cyan)', paddingLeft: '1rem', margin: '1.5rem 0', fontStyle: 'italic' }}>
-          "Every issue deserves proper time and attention. Cutting corners just creates more problems later."
-        </blockquote>
+        <section style={{ marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '1.7rem', color: '#fff', marginBottom: '1.5rem', fontWeight: 'bold' }}>
+            Chapter 4: Patience Over Speed
+          </h2>
+          <p style={{ opacity: 0.9 }}>
+            Because the time I was spending was inherently valuable, I didn't feel the urge to "hack" a quick solution. I had the patience to solve every error properly. Every bug was addressed with a permanent fix because I was in the right headspace. Now, the agent reads, summarizes, and reports via Telegram without a single intervention.
+          </p>
+        </section>
 
-        <h2 className="glow-text-green" style={{ marginTop: '2rem' }}>Chapter 5: Moving to the Cloud</h2>
-        <p>
-          The next phase is moving everything to the cloud — spinning up Ubuntu instances on both AWS and Azure, installing Docker, deploying the agent, and setting up persistent memory.
-        </p>
-
-        <h2 className="glow-text-green" style={{ marginTop: '2rem' }}>Conclusion</h2>
-        <p>
-          Everything is possible. You just need a reasonable plan, enough patience to address each problem properly, and if you are lucky — someone good to sit with while you figure it out.
-        </p>
-      </div>
-      
+        <footer style={{ marginTop: '5rem', paddingTop: '3rem', borderTop: '2px solid rgba(255, 255, 255, 0.05)' }}>
+          <p style={{ opacity: 0.9, fontSize: '1.2rem', lineHeight: '1.6' }}>
+            <strong>Chapter 5: The Takeaway</strong><br />
+            Don't underestimate the power of a mature, calm environment. Technical breakthroughs don't only happen in labs—they happen where life is being lived and shared with people who truly have more experience than we do.
+          </p>
+        </footer>
+      </article>
     </main>
   );
 }
