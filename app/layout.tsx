@@ -4,6 +4,7 @@ import "./globals.css";
 
 
 import NavBar from "./components/NavBar";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: "Life Atlas | Ivan Kukić",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-JEQVMTMJCW"} />
         <NavBar />
         {children}
         <footer style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #333', opacity: 0.6 }}>
