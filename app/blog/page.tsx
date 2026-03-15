@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Blog | Life Atlas',
+  description: 'Technical core & narratives — AI workflows, personal journeys, and deep-dive articles by Ivan Kukić.',
+};
+
 export default function BlogIndex() {
   const posts = [
     {

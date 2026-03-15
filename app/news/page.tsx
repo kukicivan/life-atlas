@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'News | Life Atlas',
+  description: 'High-signal updates and opportunities — AI credits, tools, and industry insights.',
+};
+
 export default function NewsIndex() {
   const newsItems = [
     {

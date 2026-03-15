@@ -1,6 +1,9 @@
-'use client';
-
 import UtilityCard from '../components/UtilityCard';
+
+export const metadata = {
+  title: 'Tools | Life Atlas',
+  description: 'Minimal, functional scripts for automation and data extraction — Ubuntu setup, Instagram archival, Markdown conversion.',
+};
 
 export default function ToolsPage() {
   const tools = [

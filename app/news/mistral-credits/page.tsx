@@ -1,25 +1,32 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Mistral AI Experimental Credits | Life Atlas',
+  description: 'Mistral AI is offering experimental API access with €150 monthly credit to developers. No credit card needed.',
+};
+
 export default function MistralNewsPost() {
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
-      <a href="/news" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
+      <Link href="/news" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
         ← BACK TO NEWS
-      </a>
+      </Link>
       
       <header style={{ marginBottom: '2rem' }}>
         <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', lineHeight: '1.2', fontWeight: 'bold', letterSpacing: '-0.02em' }}>
           Hidden Opportunity: Mistral AI Experimental Credits
         </h1>
         <div style={{ display: 'flex', gap: '1.5rem', opacity: 0.5, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-          <span>MARCH 15, 2026</span>
+          <time dateTime="2026-03-15">MARCH 15, 2026</time>
           <span>•</span>
           <span>SYSTEM UPDATE</span>
         </div>
       </header>
       
       <article className="utility-card blog-post-detail" style={{ padding: '2rem', border: 'none', background: 'rgba(255, 255, 255, 0.02)' }}>
-        <p style={{ fontSize: '1.3rem', color: 'var(--neon-cyan)', marginBottom: '2rem', fontWeight: '500', lineHeight: '1.4' }}>
+        <blockquote style={{ fontSize: '1.3rem', color: 'var(--neon-cyan)', marginBottom: '2rem', fontWeight: '500', lineHeight: '1.4' }}>
           "Unlocking high-tier compute for the next generation of builders."
-        </p>
+        </blockquote>
 
         <section style={{ marginBottom: '1.5rem' }}>
           <h2 style={{ fontSize: '1.7rem', color: '#fff', margin: '0', fontWeight: 'bold' }}>
@@ -65,12 +72,12 @@ export default function MistralNewsPost() {
           </div>
         </section>
 
-        <footer style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '2px solid rgba(255, 255, 255, 0.05)' }}>
+        <section style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '2px solid rgba(255, 255, 255, 0.05)' }}>
           <p style={{ opacity: 0.9, fontSize: '1.2rem', lineHeight: '1.6' }}>
             <strong>The Takeaway</strong><br />
             Speed is a competitive advantage. When infrastructure providers offer credits of this scale, the barrier between a "toy" project and a legitimate workflow disappears. Don't let this opportunity slide.
           </p>
-        </footer>
+        </section>
       </article>
     </main>
   );

@@ -1,25 +1,32 @@
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Building an AI Workflow | Life Atlas',
+  description: 'A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.',
+};
+
 export default function EmailWorkflowPost() {
   return (
     <main style={{ padding: '8rem 2rem 4rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
-      <a href="/blog" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
+      <Link href="/blog" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
         ← BACK TO BLOG
-      </a>
+      </Link>
       
       <header style={{ marginBottom: '2rem' }}>
         <h1 style={{ fontSize: '2.8rem', marginBottom: '1rem', lineHeight: '1.2', fontWeight: 'bold', letterSpacing: '-0.02em' }}>
           Building an AI Workflow
         </h1>
         <div style={{ display: 'flex', gap: '1.5rem', opacity: 0.5, fontSize: '0.9rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-          <span>MARCH 14, 2026</span>
+          <time dateTime="2026-03-14">MARCH 14, 2026</time>
           <span>•</span>
           <span>BY IVAN KUKIĆ</span>
         </div>
       </header>
       
       <article className="utility-card" style={{ padding: '2rem', border: 'none', background: 'rgba(255, 255, 255, 0.02)' }}>
-        <p style={{ fontSize: '1.3rem', color: 'var(--neon-cyan)', marginBottom: '2rem', fontWeight: '500', lineHeight: '1.4' }}>
+        <blockquote style={{ fontSize: '1.3rem', color: 'var(--neon-cyan)', marginBottom: '2rem', fontWeight: '500', lineHeight: '1.4' }}>
           "Nothing wasn't built in isolation."
-        </p>
+        </blockquote>
 
         <section style={{ marginBottom: '1.5rem' }}>
           <h2 style={{ fontSize: '1.7rem', color: '#fff', marginBottom: '0.75rem', fontWeight: 'bold' }}>
@@ -104,12 +111,14 @@ export default function EmailWorkflowPost() {
           </ul>
         </section>
 
-        <footer style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '2px solid rgba(255, 255, 255, 0.05)' }}>
+        <section style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '2px solid rgba(255, 255, 255, 0.05)' }}>
+          <h2 style={{ fontSize: '1.7rem', color: '#fff', margin: '0 0 0.75rem', fontWeight: 'bold' }}>
+            Chapter 5: The Takeaway
+          </h2>
           <p style={{ opacity: 0.9, fontSize: '1.2rem', lineHeight: '1.6' }}>
-            <strong>Chapter 5: The Takeaway</strong><br />
             Don't underestimate the power of a mature, calm environment. Technical breakthroughs don't only happen in labs—they happen where life is being lived and shared with people who truly have more experience than we do.
           </p>
-        </footer>
+        </section>
       </article>
     </main>
   );

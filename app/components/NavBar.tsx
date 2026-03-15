@@ -12,7 +12,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav>
+    <nav aria-label="Main navigation">
       <Link href="/" style={{ textDecoration: 'none' }}>
         <div className="logo-glow" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
       </Link>

@@ -1,5 +1,3 @@
-import NavBar from './components/NavBar';
-import CopyButton from './components/CopyButton';
 import UtilityCard from './components/UtilityCard';
 import Link from 'next/link';
 
@@ -50,11 +48,11 @@ export default function Home() {
         <h2 className="section-title glow-text" style={{ textShadow: 'none' }}>Workflow Experiences & AI Journey</h2>
         <div className="grid">
           <div className="glow-card" style={{ borderLeft: '4px solid var(--neon-cyan)', position: 'relative' }}>
-            <span style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold' }}>MARCH 14, 2026</span>
+            <time dateTime="2026-03-14" style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold' }}>MARCH 14, 2026</time>
             <h3 className="glow-text" style={{ margin: '0.5rem 0' }}>Building an AI Workflow</h3>
             <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.</p>
             <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>READ FULL STORY →</div>
-            <Link href="/blog/ai-workflow" className="card-link"></Link>
+            <Link href="/blog/ai-workflow" className="card-link" aria-label="Read: Building an AI Workflow"></Link>
           </div>
         </div>
       </section>
@@ -75,7 +73,7 @@ export default function Home() {
             position: 'relative', 
             zIndex: 20 
           }}>ACTIVATE CREDITS →</Link>
-          <Link href="/news/mistral-credits" className="card-link"></Link>
+          <Link href="/news/mistral-credits" className="card-link" aria-label="Read: Mistral AI Free Credits"></Link>
         </div>
       </section>
 
