@@ -190,6 +190,13 @@ section {
   margin: 0 auto;
 }
 
+/* Blog Post Specific Sections */
+.blog-post-detail section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
 .section-title {
   font-size: 2rem;
   margin-bottom: 2rem;

@@ -1,6 +1,7 @@
 import NavBar from './components/NavBar';
 import CopyButton from './components/CopyButton';
 import UtilityCard from './components/UtilityCard';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -47,31 +48,34 @@ export default function Home() {
 
       {/* Blog Section */}
       <section id="blog">
-        <h2 className="section-title glow-text" style={{ textShadow: 'none' }}>Agent Experiences & AI Journey</h2>
+        <h2 className="section-title glow-text" style={{ textShadow: 'none' }}>Workflow Experiences & AI Journey</h2>
         <div className="grid">
-          <div className="glow-card tool-card">
-            <h3 className="glow-text-green" style={{ margin: '0.5rem 0', textShadow: 'none', textAlign: 'center' }}>COMING SOON</h3>
-          </div>
+          <Link href="/blog/email-workflow" className="glow-card tool-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold' }}>MARCH 14, 2026</span>
+            <h3 className="glow-text" style={{ margin: '0.5rem 0' }}>Building an AI Workflow</h3>
+            <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.</p>
+            <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>READ FULL STORY →</div>
+          </Link>
         </div>
       </section>
       
       {/* News Section */}
       <section id="news" style={{ marginBottom: '4rem' }}>
-        <h2 className="section-title glow-text" style={{ textShadow: 'none' }}>Hidden Opportunities</h2>
+        <h2 className="section-title glow-text" style={{ textShadow: 'none' }}>NEWS</h2>
         <div className="glow-card" style={{ borderLeft: '4px solid var(--neon-cyan)' }}>
-          <h3 className="glow-text">Mistral AI: Free €150 Credits for 2026 Models</h3>
+          <h3 className="glow-text">Hidden Opportunity: Mistral AI Free Credits</h3>
           <p style={{ marginTop: '1rem', marginBottom: '1.5rem' }}>
             Experimental API access with significant compute credits. No credit card required for qualified developers.
           </p>
-          <a href="https://console.mistral.ai" target="_blank" rel="noopener noreferrer" className="glow-text-green" style={{ 
+          <Link href="/news/mistral-credits" className="glow-text-green" style={{ 
             display: 'inline-block', 
             padding: '0.5rem 1rem', 
             border: '1px solid var(--neon-green)',
             textDecoration: 'none',
             position: 'relative', 
             zIndex: 20 
-          }}>ACTIVATE CREDITS AT MISTRAL.AI →</a>
-          <a href="https://console.mistral.ai" target="_blank" rel="noopener noreferrer" className="card-link"></a>
+          }}>ACTIVATE CREDITS →</Link>
+          <Link href="/news/mistral-credits" className="card-link"></Link>
         </div>
       </section>
 
