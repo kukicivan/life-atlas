@@ -1,21 +1,17 @@
 import Link from 'next/link';
+import { newsItems } from '../data/news';
 
 export const metadata = {
   title: 'News | Life Atlas',
   description: 'High-signal updates and opportunities — AI credits, tools, and industry insights.',
+  openGraph: {
+    title: 'News | Life Atlas',
+    description: 'High-signal updates and opportunities — AI credits, tools, and industry insights.',
+    type: 'website',
+  },
 };
 
 export default function NewsIndex() {
-  const newsItems = [
-    {
-      date: "MARCH 15, 2026",
-      title: "Hidden Opportunity: Mistral AI Experimental Credits",
-      description: "Mistral AI is now offering experimental API access with €150 monthly credit to developers working on their 2026 models. No credit card needed.",
-      link: "/news/mistral-credits",
-      cta: "READ MORE"
-    }
-  ];
-
   return (
     <main style={{ maxWidth: '1000px', margin: '0 auto' }}>
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>

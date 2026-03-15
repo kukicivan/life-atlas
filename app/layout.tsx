@@ -7,10 +7,26 @@ import NavBar from "./components/NavBar";
 import ScrollToTop from "./components/ScrollToTop";
 import { GoogleAnalytics } from '@next/third-parties/google';
 
+const siteUrl = 'https://lifeatlas.site';
+
 export const metadata: Metadata = {
   title: "Life Atlas | Ivan Kukić",
   description: "Personal website, utilities, blog, and news by Ivan Kukić. Retro aesthetic, functional tools, and latest AI insights.",
   keywords: "Ivan Kukić, Life Atlas, AI Workflows, Personal AI, Utilities, Ubuntu automation, Instagram downloader",
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: 'Life Atlas | Ivan Kukić',
+    description: 'Minimal, functional hub for tools, AI workflows, and hidden opportunities.',
+    url: siteUrl,
+    siteName: 'Life Atlas',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Life Atlas | Ivan Kukić',
+    description: 'Minimal, functional hub for tools, AI workflows, and hidden opportunities.',
+  },
 };
 
 export default function RootLayout({

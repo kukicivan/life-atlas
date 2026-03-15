@@ -3,6 +3,12 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Mistral AI Experimental Credits | Life Atlas',
   description: 'Mistral AI is offering experimental API access with €150 monthly credit to developers. No credit card needed.',
+  openGraph: {
+    title: 'Mistral AI Experimental Credits',
+    description: 'Mistral AI is offering experimental API access with €150 monthly credit to developers. No credit card needed.',
+    type: 'article',
+    publishedTime: '2026-03-15',
+  },
 };
 
 export default function MistralNewsPost() {

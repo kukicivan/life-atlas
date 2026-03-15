@@ -3,6 +3,13 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Building an AI Workflow | Life Atlas',
   description: 'A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.',
+  openGraph: {
+    title: 'Building an AI Workflow',
+    description: 'A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.',
+    type: 'article',
+    publishedTime: '2026-03-14',
+    authors: ['Ivan Kukić'],
+  },
 };
 
 export default function EmailWorkflowPost() {
@@ -86,6 +93,35 @@ export default function EmailWorkflowPost() {
           <p style={{ opacity: 0.9 }}>
             Because the time I was spending was inherently valuable, I didn't feel the urge to "hack" a quick solution. I had the patience to solve every error properly. Every bug was addressed with a permanent fix because I was in the right headspace. Now, the workflow reads, summarizes, and reports via Telegram without a single intervention.
           </p>
+        </section>
+
+        <section style={{ marginBottom: '1.5rem' }}>
+          <h2 style={{ fontSize: '1.7rem', color: '#fff', margin: '0', fontWeight: 'bold' }}>
+            Architecture Deep-Dive
+          </h2>
+          <p style={{ marginBottom: '1rem', opacity: 0.9 }}>
+            The system follows a simple pipeline: incoming emails are fetched via IMAP, processed through an AI summarization layer, and delivered as Telegram notifications.
+          </p>
+          <div style={{ background: '#0d0d0d', border: '1px solid #222', borderRadius: '6px', padding: '1.25rem', fontFamily: "'JetBrains Mono', 'Fira Code', monospace", fontSize: '0.8rem', lineHeight: '1.8', marginBottom: '1rem', overflowX: 'auto' }}>
+            <div style={{ color: 'var(--neon-cyan)', marginBottom: '0.5rem' }}># Data Flow</div>
+            <div style={{ opacity: 0.9 }}>IMAP Inbox → OpenClaw Engine → OpenRouter API → Mistral AI → Summary → Telegram Bot</div>
+            <div style={{ color: 'var(--neon-cyan)', marginTop: '1rem', marginBottom: '0.5rem' }}># Infrastructure</div>
+            <div style={{ opacity: 0.9 }}>Docker Compose: openclaw + postfix (SMTP relay)</div>
+            <div style={{ opacity: 0.9 }}>Host: Azure/AWS free tier VM (Ubuntu 22.04)</div>
+            <div style={{ opacity: 0.9 }}>Cron: systemd timer, every 15 min</div>
+          </div>
+          <p style={{ opacity: 0.9, marginBottom: '1rem' }}>
+            Key environment variables that wire it together:
+          </p>
+          <div style={{ background: '#0d0d0d', border: '1px solid #222', borderRadius: '6px', padding: '1.25rem', fontFamily: "'JetBrains Mono', 'Fira Code', monospace", fontSize: '0.8rem', lineHeight: '1.8', overflowX: 'auto' }}>
+            <div style={{ color: '#555' }}># .env (example)</div>
+            <div><span style={{ color: 'var(--neon-green)' }}>OPENROUTER_API_KEY</span>=sk-or-...</div>
+            <div><span style={{ color: 'var(--neon-green)' }}>OPENROUTER_MODEL</span>=mistralai/mistral-large-latest</div>
+            <div><span style={{ color: 'var(--neon-green)' }}>IMAP_HOST</span>=imap.example.com</div>
+            <div><span style={{ color: 'var(--neon-green)' }}>IMAP_USER</span>=your@email.com</div>
+            <div><span style={{ color: 'var(--neon-green)' }}>TELEGRAM_BOT_TOKEN</span>=123456:ABC-...</div>
+            <div><span style={{ color: 'var(--neon-green)' }}>TELEGRAM_CHAT_ID</span>=your_chat_id</div>
+          </div>
         </section>
 
         <section style={{ marginBottom: '2.5rem' }}>

@@ -1,20 +1,17 @@
 import Link from 'next/link';
+import { blogPosts } from '../data/blog';
 
 export const metadata = {
   title: 'Blog | Life Atlas',
   description: 'Technical core & narratives — AI workflows, personal journeys, and deep-dive articles by Ivan Kukić.',
+  openGraph: {
+    title: 'Blog | Life Atlas',
+    description: 'Technical core & narratives — AI workflows, personal journeys, and deep-dive articles by Ivan Kukić.',
+    type: 'website',
+  },
 };
 
 export default function BlogIndex() {
-  const posts = [
-    {
-      date: "MARCH 14, 2026",
-      title: "Building an AI Workflow",
-      description: "A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.",
-      link: "/blog/ai-workflow"
-    }
-  ];
-
   return (
     <main style={{ maxWidth: '1000px', margin: '0 auto' }}>
       <header style={{ marginBottom: '4rem', textAlign: 'center' }}>
@@ -23,7 +20,7 @@ export default function BlogIndex() {
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-        {posts.map((post, i) => (
+        {blogPosts.map((post, i) => (
           <Link 
             key={i} 
             href={post.link}

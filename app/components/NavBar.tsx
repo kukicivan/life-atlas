@@ -21,6 +21,7 @@ export default function NavBar() {
         <Link href="/tools" className={`nav-link ${isActive('/tools') ? 'active-link' : ''}`}>TOOLS</Link>
         <Link href="/blog" className={`nav-link ${isActive('/blog') ? 'active-link' : ''}`}>BLOG</Link>
         <Link href="/news" className={`nav-link ${isActive('/news') ? 'active-link' : ''}`}>NEWS</Link>
+        <Link href="/about" className={`nav-link ${isActive('/about') ? 'active-link' : ''}`}>ABOUT</Link>
       </div>
     </nav>
   );
