@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-JEQVMTMJCW"} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-WG5QS01PZH"} />
         <NavBar />
         {children}
         <footer style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #333', opacity: 0.6 }}>
