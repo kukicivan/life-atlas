@@ -46,16 +46,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog Section */}
       <section id="blog">
         <h2 className="section-title glow-text" style={{ textShadow: 'none' }}>Workflow Experiences & AI Journey</h2>
         <div className="grid">
-          <Link href="/blog/email-workflow" className="glow-card tool-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div className="glow-card" style={{ borderLeft: '4px solid var(--neon-cyan)', position: 'relative' }}>
             <span style={{ fontSize: '0.75rem', opacity: 0.4, fontWeight: 'bold' }}>MARCH 14, 2026</span>
             <h3 className="glow-text" style={{ margin: '0.5rem 0' }}>Building an AI Workflow</h3>
             <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.</p>
             <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>READ FULL STORY →</div>
-          </Link>
+            <Link href="/blog/email-workflow" className="card-link"></Link>
+          </div>
         </div>
       </section>
       

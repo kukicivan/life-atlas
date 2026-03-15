@@ -26,7 +26,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <footer style={{ padding: '4rem 2rem', textAlign: 'center', borderTop: '1px solid #333', opacity: 0.6 }}>
-          <p>Made with ❤️ by Ivan Kukić</p>
+          <p>Made with ❤️ by <a href="https://linkedin.com/in/ivan-kukic" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>Ivan Kukić</a></p>
         </footer>
       </body>
     </html>

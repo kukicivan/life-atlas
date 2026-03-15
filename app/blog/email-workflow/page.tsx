@@ -81,27 +81,54 @@ export default function EmailWorkflowPost() {
           </p>
         </section>
 
-        <section style={{ marginBottom: '1.5rem', opacity: 0.8 }}>
-          <h3 style={{ fontSize: '1.1rem', color: 'var(--neon-cyan)', marginBottom: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+        <section style={{ marginBottom: '2.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--neon-cyan)', marginBottom: '1.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             References & Inspiration by Peter Steinberger
           </h3>
-          <ul style={{ listStyle: 'none', paddingLeft: '0', fontSize: '0.9rem' }}>
-            <li style={{ marginBottom: '0.5rem' }}>
-              <a href="https://steipete.me/posts/just-talk-to-it" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ textDecoration: 'underline' }}>
-                Just Talk To It
-              </a>
-            </li>
-            <li style={{ marginBottom: '0.5rem' }}>
-              <a href="https://steipete.me/posts/2025/optimal-ai-development-workflow" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ textDecoration: 'underline' }}>
-                Optimal AI Development Workflow
-              </a>
-            </li>
-            <li style={{ marginBottom: '0.5rem' }}>
-              <a href="https://steipete.me/posts/2025/shipping-at-inference-speed" target="_blank" rel="noopener noreferrer" className="nav-link" style={{ textDecoration: 'underline' }}>
-                Shipping at Inference Speed
-              </a>
-            </li>
-          </ul>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <a href="https://steipete.me/posts/just-talk-to-it" target="_blank" rel="noopener noreferrer" style={{ 
+              fontSize: '0.9rem', 
+              color: 'var(--text-color)',
+              opacity: 0.9,
+              border: '1px solid var(--neon-cyan)', 
+              padding: '0.75rem 1.5rem',
+              textDecoration: 'none',
+              display: 'inline-block',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
+              width: 'fit-content'
+            }}>
+              JUST TALK TO IT ⚡
+            </a>
+            <a href="https://steipete.me/posts/2025/optimal-ai-development-workflow" target="_blank" rel="noopener noreferrer" style={{ 
+              fontSize: '0.9rem', 
+              color: 'var(--text-color)',
+              opacity: 0.9,
+              border: '1px solid var(--neon-cyan)', 
+              padding: '0.75rem 1.5rem',
+              textDecoration: 'none',
+              display: 'inline-block',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
+              width: 'fit-content'
+            }}>
+              OPTIMAL AI DEVELOPMENT WORKFLOW ⚡
+            </a>
+            <a href="https://steipete.me/posts/2025/shipping-at-inference-speed" target="_blank" rel="noopener noreferrer" style={{ 
+              fontSize: '0.9rem', 
+              color: 'var(--text-color)',
+              opacity: 0.9,
+              border: '1px solid var(--neon-cyan)', 
+              padding: '0.75rem 1.5rem',
+              textDecoration: 'none',
+              display: 'inline-block',
+              fontWeight: 'bold',
+              letterSpacing: '0.05em',
+              width: 'fit-content'
+            }}>
+              SHIPPING AT INFERENCE SPEED ⚡
+            </a>
+          </div>
         </section>
 
         <footer style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '2px solid rgba(255, 255, 255, 0.05)' }}>
