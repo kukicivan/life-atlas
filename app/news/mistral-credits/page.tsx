@@ -12,8 +12,19 @@ export const metadata = {
 };
 
 export default function MistralNewsPost() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Hidden Opportunity: Mistral AI Experimental Credits',
+    datePublished: '2026-03-15',
+    author: { '@type': 'Person', name: 'Ivan Kuki\u0107', url: 'https://lifeatlas.site/about' },
+    publisher: { '@type': 'Person', name: 'Ivan Kuki\u0107' },
+    mainEntityOfPage: 'https://lifeatlas.site/news/mistral-credits',
+  };
+
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Link href="/news" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
         ← BACK TO NEWS
       </Link>

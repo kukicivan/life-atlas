@@ -11,7 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/tools`,
+      url: `${baseUrl}/blog/ai-workflow`,
+      lastModified: new Date('2026-03-14'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/news/mistral-credits`,
       lastModified: new Date('2026-03-15'),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -20,22 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog`,
       lastModified: new Date('2026-03-15'),
       changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog/ai-workflow`,
-      lastModified: new Date('2026-03-14'),
-      changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/news`,
       lastModified: new Date('2026-03-15'),
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.7,
     },
     {
-      url: `${baseUrl}/news/mistral-credits`,
+      url: `${baseUrl}/tools`,
       lastModified: new Date('2026-03-15'),
       changeFrequency: 'monthly',
       priority: 0.7,
@@ -44,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/about`,
       lastModified: new Date('2026-03-15'),
       changeFrequency: 'monthly',
-      priority: 0.5,
+      priority: 0.4,
     },
   ];
 }

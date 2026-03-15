@@ -11,7 +11,7 @@ export const tools: Tool[] = [
   {
     title: "Ubuntu Automation Script",
     description: "Streamline setup with automated package installation and system optimization.",
-    command: "curl -sSL https://life-atlas-nine.vercel.app/bin/linux-setup/install.sh | bash",
+    command: "curl -sSL https://lifeatlas.site/bin/linux-setup/install.sh | bash",
     sourceUrl: "https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup",
     prerequisites: "Ubuntu 20.04+, curl",
     readmeUrl: "/bin/linux-setup/README.md",

@@ -13,8 +13,19 @@ export const metadata = {
 };
 
 export default function EmailWorkflowPost() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Building an AI Workflow',
+    datePublished: '2026-03-14',
+    author: { '@type': 'Person', name: 'Ivan Kuki\u0107', url: 'https://lifeatlas.site/about' },
+    publisher: { '@type': 'Person', name: 'Ivan Kuki\u0107' },
+    mainEntityOfPage: 'https://lifeatlas.site/blog/ai-workflow',
+  };
+
   return (
     <main style={{ maxWidth: '800px', margin: '0 auto', lineHeight: '1.8' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Link href="/blog" className="nav-link" style={{ display: 'inline-block', marginBottom: '3rem', fontSize: '0.85rem' }}>
         ← BACK TO BLOG
       </Link>
