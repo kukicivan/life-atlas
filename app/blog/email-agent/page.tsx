@@ -23,8 +23,6 @@ export default function EmailAgentPost() {
 
         <section style={{ marginBottom: '4rem' }}>
           <h2 style={{ fontSize: '1.7rem', color: '#fff', marginBottom: '1.5rem', fontWeight: 'bold' }}>
-            Beyond the Myth of the "Silent Room"
-          </h2>
             Chapter 1: Beyond the Myth of the "Silent Room"
           </h2>
           <p style={{ marginBottom: '1.5rem', opacity: 0.9 }}>

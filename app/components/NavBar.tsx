@@ -18,24 +18,10 @@ export default function NavBar() {
         <div className="logo-glow" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
       </Link>
       <div className="nav-links">
-        <Link
-          href="/"
-          className={`nav-link ${pathname === '/' ? 'active' : ''}`}
-        >
-          HOME
-        </Link>
-        <Link 
-          href="/tools" 
-          className={isActive('/tools') ? 'active-link' : ''}
-        >
-          TOOLS
-        </Link>
-        <Link 
-          href="/news" 
-          className={isActive('/news') ? 'active-link' : ''}
-        >
-          NEWS
-        </Link>
+        <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>HOME</Link>
+        <Link href="/tools" className={`nav-link ${pathname === '/tools' ? 'active' : ''}`}>TOOLS</Link>
+        <Link href="/blog" className={`nav-link ${pathname === '/blog' ? 'active' : ''}`}>BLOG</Link>
+        <Link href="/#news" className="nav-link">NEWS</Link>
       </div>
     </nav>
   );
