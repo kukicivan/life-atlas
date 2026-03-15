@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/blog/email-workflow`,
+      url: `${baseUrl}/blog/ai-workflow`,
       lastModified: new Date('2026-03-14'),
       changeFrequency: 'monthly',
       priority: 0.7,

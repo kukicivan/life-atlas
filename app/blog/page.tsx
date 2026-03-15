@@ -6,7 +6,7 @@ export default function BlogIndex() {
       date: "MARCH 14, 2026",
       title: "Building an AI Workflow",
       description: "A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.",
-      link: "/blog/email-workflow"
+      link: "/blog/ai-workflow"
     }
   ];
 

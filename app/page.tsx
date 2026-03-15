@@ -54,7 +54,7 @@ export default function Home() {
             <h3 className="glow-text" style={{ margin: '0.5rem 0' }}>Building an AI Workflow</h3>
             <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>A journey in patience, code, and why having a non-technical friend nearby is the secret to great success.</p>
             <div style={{ marginTop: '1rem', fontSize: '0.8rem', color: 'var(--neon-cyan)', fontWeight: 'bold' }}>READ FULL STORY →</div>
-            <Link href="/blog/email-workflow" className="card-link"></Link>
+            <Link href="/blog/ai-workflow" className="card-link"></Link>
           </div>
         </div>
       </section>
