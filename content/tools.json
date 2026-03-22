@@ -1,6 +1,6 @@
 [
   {
-    "title": "Ubuntu Desktop Setup",
+    "title": "Ubuntu Automation Script",
     "description": "One-command full development environment setup for Ubuntu 24.04 (GUI apps included).",
     "command": "curl -sSL https://lifeatlas.site/bin/linux-setup/ubuntu/install.sh | bash",
     "sourceUrl": "https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup/ubuntu",
@@ -8,7 +8,7 @@
     "readmeUrl": "/bin/linux-setup/ubuntu/README.md"
   },
   {
-    "title": "WSL2 Environment Setup",
+    "title": "WSL2 Automation Script",
     "description": "Lightweight development environment setup for WSL2 (headless, no GUI apps).",
     "command": "curl -sSL https://lifeatlas.site/bin/linux-setup/wsl2/install.sh | bash",
     "sourceUrl": "https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup/wsl2",
