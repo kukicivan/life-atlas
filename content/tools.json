@@ -1,11 +1,19 @@
 [
   {
-    "title": "Ubuntu Automation Script",
-    "description": "Streamline setup with automated package installation and system optimization.",
-    "command": "curl -sSL https://lifeatlas.site/bin/linux-setup/install.sh | bash",
-    "sourceUrl": "https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup",
-    "prerequisites": "Ubuntu 20.04+, curl",
-    "readmeUrl": "/bin/linux-setup/README.md"
+    "title": "Ubuntu Desktop Setup",
+    "description": "One-command full development environment setup for Ubuntu 24.04 (GUI apps included).",
+    "command": "curl -sSL https://lifeatlas.site/bin/linux-setup/ubuntu/install.sh | bash",
+    "sourceUrl": "https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup/ubuntu",
+    "prerequisites": "Ubuntu 24.04, sudo, curl",
+    "readmeUrl": "/bin/linux-setup/ubuntu/README.md"
+  },
+  {
+    "title": "WSL2 Environment Setup",
+    "description": "Lightweight development environment setup for WSL2 (headless, no GUI apps).",
+    "command": "curl -sSL https://lifeatlas.site/bin/linux-setup/wsl2/install.sh | bash",
+    "sourceUrl": "https://github.com/kukicivan/life-atlas/tree/main/public/bin/linux-setup/wsl2",
+    "prerequisites": "Ubuntu 24.04 (WSL2), sudo, curl",
+    "readmeUrl": "/bin/linux-setup/wsl2/README.md"
   },
   {
     "title": "Instagram Photo Downloader",

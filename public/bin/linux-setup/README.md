@@ -1,52 +1,74 @@
-# DevBox 🛠️
+# DevBox
 
-**One-command Ubuntu 24.04 development environment setup**
+One-command development environment setup for Ubuntu 24.04. Two variants: full desktop Ubuntu and lightweight WSL2.
 
-Perfect development stack installation for fresh Ubuntu systems. Get from zero to fully configured development environment in minutes.
-
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
-# Clone and run
 git clone git@gitlab.com:tech-talent-connect/devbox.git
 cd devbox
-chmod +x install.sh
-./install.sh
 ```
 
-**That's it!** ✨ Logout/login and you're ready to code.
+**Ubuntu Desktop** (full setup with GUI apps):
+```bash
+cd ubuntu && chmod +x install.sh && ./install.sh
+```
 
-## 📦 What Gets Installed
+**WSL2** (headless, no GUI apps):
+```bash
+cd wsl2 && chmod +x install.sh && ./install.sh
+```
 
-### 🏗️ **Core Development**
-- **Docker & Docker Compose** - Containerization platform
-- **Portainer** - Docker management UI at `https://localhost:9443`
-- **Git** - Pre-configured with user settings
-- **Build tools** - Essential compilation tools
+## Structure
 
-### 💻 **IDEs & Editors**
-- **Visual Studio Code** - With useful extensions
-- **WebStorm** - JetBrains IDE (requires license)
-- **Geany** - Free lightweight editor
+```
+devbox/
+├── ubuntu/
+│   ├── install.sh    # Full desktop Ubuntu setup
+│   └── README.md     # Detailed docs for ubuntu variant
+├── wsl2/
+│   ├── install.sh    # Lightweight WSL2 setup
+│   └── README.md     # Detailed docs for wsl2 variant
+└── README.md         # This file
+```
 
-### 🌐 **Web & Tools**
-- **Brave Browser** - Privacy-focused browser
-- **Postman** - API testing platform
-- **Node.js 18 & 20** - Via NVM for version management
-- **Terminator** - Advanced terminal with enhanced scrollback
+## What's Included
 
-### ⚡ **Productivity Features**
-- **Custom aliases** - 25+ time-saving shortcuts
-- **Organized workspace** - `~/Development/` structure
-- **Enhanced terminal** - Better scrolling and colors
+### Common (both variants)
 
-## 📁 Development Workspace
+| Category | Tools |
+|----------|-------|
+| Containerization | Docker, Docker Compose (v2 plugin), Portainer |
+| Version Control | Git (pre-configured) |
+| Runtime | Node.js 20 & 22 LTS via NVM, yarn, pm2, nodemon |
+| AI | Claude Code |
+| Terminal | Terminator (configured with 10k scrollback) |
+| System | build-essential, curl, wget, jq, htop, neofetch, nmap, net-tools |
+| Productivity | 25+ bash aliases (git, docker, navigation), organized `~/Development/` workspace |
+
+### Differences
+
+| Feature | Ubuntu | WSL2 |
+|---------|:------:|:----:|
+| Visual Studio Code + extensions | yes | - |
+| WebStorm (snap) | yes | - |
+| Geany + plugins | yes | - |
+| Brave Browser | yes | - |
+| Postman (snap) | yes | - |
+| Snap support required | yes | - |
+| GUI apps | yes | - |
+
+The WSL2 variant removes all GUI applications and snap packages, since WSL2 environments are typically headless and snap is not supported out of the box. IDEs are installed on the Windows host side instead.
+
+## Workspace Layout
+
+Both variants create the same directory structure:
 
 ```
 ~/Development/
 ├── Projects/
 │   ├── Web/           # Web applications
-│   ├── APIs/          # Backend services  
+│   ├── APIs/          # Backend services
 │   ├── Mobile/        # Mobile apps
 │   ├── Desktop/       # Desktop applications
 │   └── Other/         # Misc projects
@@ -60,139 +82,45 @@ chmod +x install.sh
     └── Networks/      # Network configs
 ```
 
-## ⚡ Quick Commands (Auto-loaded aliases)
+## Aliases (both variants)
 
-### 📂 **Navigation**
-```bash
-dev        # cd ~/Development
-projects   # cd ~/Development/Projects
-scripts    # cd ~/Development/Scripts
-```
+| Alias | Command |
+|-------|---------|
+| `gs` | `git status` |
+| `ga` | `git add .` |
+| `gps` | `git push` |
+| `gpl` | `git pull` |
+| `gc` | `git checkout -` |
+| `gcd` | `git checkout develop` |
+| `gcm` | `git checkout main` |
+| `dps` | `docker compose ps` |
+| `dlog` | `docker compose logs` |
+| `dbuild` | `docker compose up --build -d` |
+| `dclean` | `docker compose down -v --rmi local --remove-orphans` |
+| `dev` | `cd ~/Development` |
+| `projects` | `cd ~/Development/Projects` |
+| `ll` | Enhanced `ls` with colors and sorting |
 
-### 🔧 **Git Shortcuts**
-```bash
-gs         # git status
-ga         # git add .
-gps        # git push
-gpl        # git pull
-gc         # git checkout -
-gcd        # git checkout develop
-gcm        # git checkout main
-```
+## Post-Installation
 
-### 🐳 **Docker Shortcuts**
-```bash
-dps        # docker-compose ps
-dlog       # docker-compose logs
-dbuild     # docker-compose up --build -d
-dclean     # docker-compose down -v --rmi local --remove-orphans
-```
+- **Docker**: logout/login required for group permissions
+- **Portainer**: create admin account at https://localhost:9443
+- **Claude Code**: run `claude`, authenticate with `/login` on first use
+- **WebStorm** (ubuntu only): requires JetBrains license
 
-### 🎨 **Enhanced System**
-```bash
-ll         # Enhanced ls with colors and sorting
-tree       # Git-aware tree with colors
-plainTree  # ASCII tree structure
-```
+## Requirements
 
-## 🔧 Requirements
+- Ubuntu 24.04 (native or WSL2)
+- Sudo access
+- Internet connection
+- ~2GB free space
 
-- **Ubuntu 24.04** (optimized for, works on others with warning)
-- **Sudo access** (script will ask for password)
-- **Internet connection** (for downloads)
-- **~2GB free space** (for all tools)
+Both scripts are idempotent — safe to run multiple times.
 
-## 🎯 Perfect For
+## License
 
-- 🆕 **Fresh Ubuntu installations**
-- 💻 **New development machines**
-- 🏢 **Team environment standardization**  
-- ⚡ **Quick development setup**
-- 🔄 **System reinstalls/migrations**
-
-## ⚙️ Post-Installation
-
-### 🔑 **Important Notes**
-- **Docker**: Logout/login required for permissions
-- **Portainer**: Create admin account at first login
-- **WebStorm**: Requires JetBrains license
-- **Aliases**: Available in new terminals automatically
-
-### 🌐 **Access Points**
-- **Portainer**: https://localhost:9443
-- **N8N** (if installed): http://localhost:5678
-- **All development**: `~/Development/` directory
-
-### 🔄 **Node.js Management**
-```bash
-nvm list           # Show installed versions
-nvm use 18         # Switch to Node 18
-nvm use 20         # Switch to Node 20
-nvm alias default 20  # Set default version
-```
-
-## 🛠️ Customization
-
-The script is designed to be modified. Key sections:
-
-- **Line 150+**: IDE installation
-- **Line 200+**: Additional tools
-- **Line 300+**: Alias definitions
-- **Line 350+**: Workspace structure
-
-## 📋 Manual Steps (Optional)
-
-### 🔐 **SSH Key Generation**
-```bash
-ssh-keygen -t ed25519 -C "ivan.kukic@gmail.com"
-cat ~/.ssh/id_ed25519.pub  # Add to GitHub/GitLab
-```
-
-### 🌐 **Browser Extensions** 
-- Install your preferred extensions in Brave
-- Import bookmarks and settings
-
-### 🎨 **Terminal Themes**
-- Terminator themes: Right-click → Preferences → Profiles
-- Install powerline fonts for better prompts
-
-## 🐛 Troubleshooting
-
-### ❌ **Docker Permission Issues**
-```bash
-sudo usermod -aG docker $USER
-# Then logout/login
-```
-
-### 🔄 **Script Re-run**
-The script is idempotent - safe to run multiple times.
-
-### 📱 **VS Code Extensions Not Loading**
-```bash
-code --list-extensions
-# Re-install if needed
-```
-
-### 🆘 **Get Help**
-1. Check the script output logs
-2. Verify Ubuntu version compatibility  
-3. Ensure sudo access
-4. Check internet connection
-
-## 🤝 Contributing
-
-This is a personal development setup, but improvements welcome:
-
-1. Fork the repository
-2. Create feature branch
-3. Test thoroughly on clean Ubuntu 24.04
-4. Submit pull request
-
-## 📄 License
-
-MIT License - Use freely for personal and commercial projects.
+MIT License
 
 ---
 
-**Made with ❤️ by Ivan Kukic**  
-*Perfect development environment, one command away.*
+**Made with ❤️ by Ivan Kukic**

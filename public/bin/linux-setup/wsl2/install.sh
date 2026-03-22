@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Development Stack Setup Script
-# Complete development environment installation for Ubuntu 24.04
+# Complete development environment installation for Ubuntu 24.04 (WSL2)
 # Author: Ivan Kukic <ivan.kukic@gmail.com>
-# Version: 2.0
+# Version: 3.0
 
 set -e
 
@@ -43,19 +43,6 @@ if ! grep -q "24.04" /etc/os-release; then
         exit 0
     fi
 fi
-
-# Function for installing Snap packages
-install_snap() {
-    local package="$1"
-    local flags="$2"
-    
-    if ! snap list | grep -q "^$package "; then
-        log "📦 Installing $package via snap..."
-        sudo snap install "$package" $flags
-    else
-        log "✅ $package is already installed"
-    fi
-}
 
 # Function for installing APT packages
 install_apt() {
@@ -151,16 +138,6 @@ else
     log "✅ Docker is already installed"
 fi
 
-# Install Docker Compose (standalone) - backup for older systems
-if ! command_exists docker-compose; then
-    log "📦 Installing Docker Compose standalone..."
-    DOCKER_COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | jq -r .tag_name)
-    sudo curl -L "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
-else
-    log "✅ Docker Compose is already installed"
-fi
-
 # ===== PORTAINER SETUP =====
 log "📊 Setting up Portainer..."
 
@@ -189,52 +166,8 @@ else
     log "🌐 Portainer is accessible at: https://localhost:9443"
 fi
 
-# ===== IDEs AND EDITORS =====
-log "💻 Installing IDEs and editors..."
-
-# Visual Studio Code
-if ! command_exists code; then
-    log "📦 Installing Visual Studio Code..."
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-    sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-    sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
-    sudo apt update
-    install_apt "code"
-    
-    # Install useful VS Code extensions
-    log "📦 Installing VS Code extensions..."
-    code --install-extension ms-vscode.vscode-typescript-next
-    code --install-extension esbenp.prettier-vscode
-    code --install-extension bradlc.vscode-tailwindcss
-    code --install-extension ritwickdey.liveserver
-    code --install-extension ms-python.python
-    code --install-extension ms-vscode.powershell
-else
-    log "✅ Visual Studio Code is already installed"
-fi
-
-# WebStorm
-if ! command_exists webstorm; then
-    log "📦 Installing WebStorm..."
-    install_snap "webstorm" "--classic"
-else
-    log "✅ WebStorm is already installed"
-fi
-
-# Free alternative to Sublime Text - Geany or Mousepad
-if ! command_exists geany; then
-    log "📦 Installing Geany (free text editor)..."
-    install_apt "geany"
-    install_apt "geany-plugins"
-else
-    log "✅ Geany is already installed"
-fi
-
 # ===== ADDITIONAL DEVELOPMENT TOOLS =====
 log "🛠️ Installing additional development tools..."
-
-# Postman for API testing
-install_snap "postman"
 
 # Terminator - advanced terminal
 install_apt "terminator"
@@ -277,49 +210,50 @@ log "✅ Terminator configured with extended scrollback (10000 lines)"
 install_apt "net-tools"
 install_apt "nmap"
 
-# ===== WEB BROWSER =====
-log "🌐 Installing web browsers..."
-
-# Brave Browser
-if ! command_exists brave-browser; then
-    log "📦 Installing Brave Browser..."
-    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-    echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-    sudo apt update
-    install_apt "brave-browser"
-else
-    log "✅ Brave Browser is already installed"
-fi
-
 # ===== NODE.js VIA NVM =====
 log "📦 Installing Node.js via NVM..."
 
 # Install NVM
 if [ ! -d "$HOME/.nvm" ]; then
     log "📦 Installing NVM..."
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-    
-    # Source NVM immediately
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-    
-    # Install Node.js versions 18 and 20
-    log "📦 Installing Node.js 18..."
-    nvm install 18
-    
-    log "📦 Installing Node.js 20..."
-    nvm install 20
-    
-    # Set Node.js 20 as default
-    nvm use 20
-    nvm alias default 20
-    
-    # Install global npm packages
-    log "📦 Installing global npm packages..."
-    npm install -g yarn pm2 nodemon
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 else
     log "✅ NVM is already installed"
+fi
+
+# Source NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Install Node.js versions
+if ! nvm ls 20 >/dev/null 2>&1; then
+    log "📦 Installing Node.js 20 LTS..."
+    nvm install 20
+fi
+
+if ! nvm ls 22 >/dev/null 2>&1; then
+    log "📦 Installing Node.js 22 LTS..."
+    nvm install 22
+fi
+
+# Set Node.js 22 as default
+nvm use 22
+nvm alias default 22
+
+# Install global npm packages
+log "📦 Installing global npm packages..."
+npm install -g yarn pm2 nodemon
+
+# ===== CLAUDE CODE =====
+log "🤖 Installing Claude Code..."
+
+if ! command_exists claude; then
+    npm install -g @anthropic-ai/claude-code
+    log "✅ Claude Code installed"
+else
+    log "✅ Claude Code is already installed, updating..."
+    npm update -g @anthropic-ai/claude-code
 fi
 
 # ===== DEVELOPMENT WORKSPACE CREATION =====
@@ -394,10 +328,10 @@ alias grcn="git restore . && git clean -fn"
 
 
 # Docker
-alias dps="docker-compose ps"
-alias dlog="docker-compose logs"
-alias dclean="docker-compose down -v --rmi local --remove-orphans"
-alias dbuild="docker-compose up --build -d"
+alias dps="docker compose ps"
+alias dlog="docker compose logs"
+alias dclean="docker compose down -v --rmi local --remove-orphans"
+alias dbuild="docker compose up --build -d"
 
 # Development navigation
 alias dev='cd ~/Development'
@@ -435,12 +369,10 @@ log "🎉 Development Stack Setup completed successfully!"
 echo ""
 echo -e "${BLUE}📧 Installed tools include:${NC}"
 echo "   • Containerization: Docker, Docker Compose, Portainer"
-echo "   • IDEs: VS Code (with extensions), WebStorm, Geany"
 echo "   • Version Control: Git (configured for Ivan Kukic <ivan.kukic@gmail.com>)"
-echo "   • API Testing: Postman"
 echo "   • Terminal: Terminator (configured with extended scrollback)"
-echo "   • Runtime: Node.js 18 & 20 via NVM with npm, yarn, pm2, nodemon"
-echo "   • Browser: Brave Browser"
+echo "   • Runtime: Node.js 20 & 22 via NVM with npm, yarn, pm2, nodemon"
+echo "   • AI: Claude Code"
 echo "   • System: htop, neofetch, jq, network tools"
 echo ""
 echo -e "${BLUE}📁 Development workspace created in ~/Development/${NC}"
@@ -454,15 +386,14 @@ echo "   • Git: gc, gcd, gs, ga, gcm, gps, gpl, gb, gba, gfp, grc, grcn"
 echo "   • Docker: dps, dlog, dclean, dbuild"
 echo "   • Navigation: dev, projects, scripts, dcompose"
 echo "   • System: ll (enhanced ls), tree, plainTree"
-echo "   • Laravel: sail"
 echo ""
 echo -e "${BLUE}🌐 Services:${NC}"
 echo "   • Portainer Web UI: https://localhost:9443"
 echo ""
 echo -e "${YELLOW}⚠️ IMPORTANT NOTES:${NC}"
 echo "   • Logout/login required for Docker to work without sudo"
-echo "   • WebStorm: Launch with 'webstorm' command or desktop shortcut"
 echo "   • Portainer: Create admin account on first access"
+echo "   • Claude Code: Run 'claude' to start, authenticate with /login on first use"
 echo "   • New aliases available after opening new terminal or running: source ~/.bashrc"
 echo ""
 
