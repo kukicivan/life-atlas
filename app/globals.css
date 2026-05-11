@@ -344,18 +344,18 @@ section {
 .markdown-body h2 {
   font-size: 1.6rem;
   color: var(--neon-cyan);
-  margin: 2.5rem 0 1rem;
+  margin: 2rem 0 0.6rem;
   letter-spacing: -0.01em;
 }
 
 .markdown-body h3 {
   font-size: 1.25rem;
   color: var(--neon-cyan);
-  margin: 2rem 0 0.75rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .markdown-body p {
-  margin: 1rem 0;
+  margin: 0.75rem 0;
   opacity: 0.85;
 }
 
@@ -373,20 +373,25 @@ section {
 .markdown-body blockquote {
   border-left: 3px solid var(--neon-cyan);
   padding: 0.75rem 1.25rem;
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
   background: rgba(0, 243, 255, 0.03);
   font-style: italic;
   opacity: 0.8;
 }
+/* Two-paragraph blockquotes (intro quote with break inside) shouldn't
+   double the gap between lines — tighten paragraph margins inside. */
+.markdown-body blockquote p {
+  margin: 0.35rem 0;
+}
 
 .markdown-body ul,
 .markdown-body ol {
-  margin: 1rem 0;
+  margin: 0.75rem 0;
   padding-left: 1.5rem;
 }
 
 .markdown-body li {
-  margin: 0.4rem 0;
+  margin: 0.3rem 0;
   opacity: 0.85;
 }
 
@@ -410,7 +415,7 @@ section {
 .markdown-body hr {
   border: none;
   border-top: 1px solid var(--border-color);
-  margin: 2.5rem 0;
+  margin: 2rem 0;
 }
 
 .markdown-body strong {

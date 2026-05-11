@@ -6,7 +6,6 @@ author: "Ivan Kukić"
 ---
 
 > Pritisnem mic. Kažem: *"Klod, napiši testove za onu novu skripta-funkciju, pa commit-uj."*
->
 > Gledam ga kako radi. Tri minute kasnije, glas u zvučniku: *"Gotovo. Sedam testova, svi prolaze, commit push-ovan."*
 
 ## Šta sam upravo napravio
