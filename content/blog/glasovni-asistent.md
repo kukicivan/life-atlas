@@ -33,9 +33,15 @@ Tri pravila:
 - Klasifikator: moj kod koji odlučuje da li je iskaz upućen meni ili nekom drugom — wake-word + sliding follow-up window + filter za halucinacije i šum
 - Sve u Docker kontejneru koji se sam pokrene
 
+## Šta sam ukapirao jutros
+
+Sa ovim alatom **djeca mogu da programiraju**. Ne moraju da znaju kod. Ne moraju da nauče jezik. Sjede, pričaju kompjuteru šta žele da naprave — i on napravi.
+
+Djeca imaju sjajne ideje. Sada nemaju barijeru između ideje i realizacije.
+
 ## Trenutno stanje
 
-Trenutno testiram sa tri kolege. Radi.
+Testiram sa tri kolege. Radi.
 
 Ovo nije proizvod koji prodajem. Informativno — ako neko želi da napravi isto za sebe, javite se, rado ću objasniti kako.
 
