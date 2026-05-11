@@ -425,8 +425,10 @@ section {
 }
 
 .markdown-body strong {
-  color: var(--active-text);
   font-weight: 600;
+  /* No color override — must inherit from parent so bold reads correctly
+     in BOTH themes. Previously hardcoded --active-text which is white in
+     light mode → invisible. */
 }
 
 /* Scanline Effect */
