@@ -38,7 +38,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // suppressHydrationWarning on <html>: the inline script below sets
+    // `data-theme` on documentElement BEFORE React hydrates. Server
+    // renders without that attribute (no localStorage on server) so the
+    // attributes diverge — React would throw error #418 without this.
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Theme init — runs before paint so the page never flashes the
             wrong theme. Reads explicit user choice from localStorage,
