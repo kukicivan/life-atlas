@@ -46,4 +46,4 @@ Ovo nije proizvod koji prodajem. Informativno — ako neko želi da napravi isto
 
 ---
 
-*Ovaj post je 80% pisao glas. Editovao sam ga tastaturom — htio sam da iznesem misli precizno. Sljedeći put, kompletan post bez ijednog dodira tastature. Vidjet ćete.*
+*Ovaj post je 80% pisao glas. Editovao sam ga tastaturom — htio sam da iznesem misli precizno.*
