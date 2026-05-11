@@ -5,32 +5,32 @@ description: "Sjedim za stolom, pričam, kompjuter radi. Ne dodirujem tastaturu.
 author: "Ivan Kukić"
 ---
 
-> *"Klod, prikaži mi koliko imam slobodnog prostora na disku."*
+> Pritisnem mic. Kažem: *"Klod, napiši testove za onu novu skripta-funkciju, pa commit-uj."*
 >
-> Mikrofon je upaljen tri sata. Nisam dodirnuo tastaturu od jutra.
+> Gledam ga kako radi. Tri minute kasnije, glas u zvučniku: *"Gotovo. Sedam testova, svi prolaze, commit push-ovan."*
 
 ## Šta sam upravo napravio
 
-Glasovni asistent koji **sluša cijeli dan**, razumije kad pričam **njemu** a kad pričam **ženi** ili **TV-u**, i radi posao u Claude Code terminalu.
+Glasovni interfejs za Claude Code. Pritisnem dugme, kažem šta hoću da uradi, gledam ga kako radi uživo, i on mi se javlja glasom kad završi.
 
 Nije *"hej Siri, koliko je sati"*. To je *"Klod, otvori projekat, napiši testove za novu funkciju, commit-uj na granu."* — i on to odradi. Ja ne dodirujem tastaturu.
 
-## Zašto je drugačije
+## Kako izgleda u praksi
 
-Tri pravila:
+1. **Pritisnem mic** — bez ritual-a, bez parsing-a komandi
+2. **Kažem šta hoću** — slobodno, prirodnim jezikom, koliko god treba
+3. **Pustim dugme** — transkript ide u Claude Code sesiju
+4. **Gledam uživo kako radi** — svaki korak je vidljiv na panelu, kao da gledam preko ramena
+5. **Čujem rezultat** — kad završi, javi se glasom: *"Gotovo. Tri testa popravljena, commit push-ovan."*
 
-**1. Mikrofon je stalno upaljen.** Bez wake-word ritual-a, bez klikova.
-
-**2. Razlikuje kome pričam.** Kad kažem *"Klod, popravi onaj bug"* — radi. Kad kažem ženi *"ima li kafe?"* — ćuti. Klasifikator zna razliku.
-
-**3. Razgovor teče prirodno.** Kažem *"Klod, koje je vrijeme u Tokiju?"* — odgovori — odmah pitam *"a u Sidneju?"* — razumije da i dalje pričam s njim. Bez ponavljanja imena.
+Bez dvosmislenosti. Bez čekanja da pogodi šta sam mislio. Bez šest poruka da se sklopi jedna komanda.
 
 ## Tehnička osnova
 
 - Glas → tekst: **Groq Whisper Large v3**
 - Razmišljanje: **Claude Opus 4.7** preko CLI
 - Tekst → glas: **Azure Speech**, hrvatski glas Gabrijela
-- Klasifikator: moj kod koji odlučuje da li je iskaz upućen meni ili nekom drugom — wake-word + sliding follow-up window + filter za halucinacije i šum
+- Server-sent events stream između Claude Code sesije i web stranice — vidim svaki korak uživo
 - Sve u Docker kontejneru koji se sam pokrene
 
 ## Šta sam ukapirao jutros
