@@ -2,6 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import ThemeToggle from './ThemeToggle';
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -16,12 +17,13 @@ export default function NavBar() {
       <Link href="/" style={{ textDecoration: 'none' }}>
         <div className="logo-glow" style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>LIFE ATLAS</div>
       </Link>
-      <div className="nav-links">
+      <div className="nav-links" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         <Link href="/" className={`nav-link ${isActive('/') ? 'active-link' : ''}`}>HOME</Link>
         <Link href="/tools" className={`nav-link ${isActive('/tools') ? 'active-link' : ''}`}>TOOLS</Link>
         <Link href="/blog" className={`nav-link ${isActive('/blog') ? 'active-link' : ''}`}>BLOG</Link>
         <Link href="/news" className={`nav-link ${isActive('/news') ? 'active-link' : ''}`}>NEWS</Link>
         <Link href="/about" className={`nav-link ${isActive('/about') ? 'active-link' : ''}`}>ABOUT</Link>
+        <ThemeToggle />
       </div>
     </nav>
   );

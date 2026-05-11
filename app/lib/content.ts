@@ -55,6 +55,11 @@ export function getAllPosts(section: 'blog' | 'news'): PostMeta[] {
         cta: data.cta,
       };
     })
+    // Skip drafts and orphan files (e.g. <slug>.draft.md, LinkedIn copy
+    // sketches) that have no parseable date. Without this guard the
+    // sitemap route blows up with "Invalid time value" on prerender,
+    // taking the whole production build down with it.
+    .filter((p) => p.date && !Number.isNaN(new Date(p.date).getTime()))
     .sort((a, b) => (a.date > b.date ? -1 : 1));
 }
 
